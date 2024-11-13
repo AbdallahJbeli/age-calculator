@@ -18,6 +18,7 @@
     max-width: 600px;
     margin-left: 10%;
     margin-top: 10%;
+    text-align: center;
 }
 
 .calculator h1 {
@@ -25,7 +26,7 @@
 }
 
 .calculator h1 span {
-    color: #ffff76 ;
+    color: #ffff76;
 }
 
 .input-box {
@@ -35,6 +36,8 @@
     background: rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .input-box input {
@@ -46,6 +49,8 @@
     font-size: 18px;
     border-radius: 5px;
     position: relative;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .input-box button {
@@ -74,9 +79,78 @@
 
 #result {
     font-size: 20px;
-
 }
 
 #result span {
     color: #ffff76;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .calculator {
+        margin-left: 5%;
+    }
+    .calculator h1 {
+        font-size: 50px;
+    }
+    .input-box {
+        padding: 25px;
+    }
+    .input-box input, .input-box button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .calculator {
+        margin-left: 2%;
+        margin-top: 5%;
+    }
+    .calculator h1 {
+        font-size: 45px;
+    }
+    .input-box {
+        padding: 20px;
+    }
+    .input-box input, .input-box button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        margin-left: 0;
+        margin-top: 5%;
+    }
+    .calculator h1 {
+        font-size: 40px;
+    }
+    .input-box {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .input-box input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .input-box button {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator h1 {
+        font-size: 35px;
+    }
+    .input-box {
+        padding: 10px;
+    }
+    .input-box input, .input-box button {
+        font-size: 12px;
+        padding: 10px;
+    }
+    #result {
+        font-size: 18px;
+    }
 }
